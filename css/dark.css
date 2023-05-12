@@ -2,6 +2,6 @@
     --primary:red;
 }
 
-.primary{
-    background-color: var(--primary);
+.btn-theme{
+    background-color: red;
 }

@@ -8,7 +8,7 @@
         
 
         if($userPswrd === $password){
-            setcookie("theme", uniqid(), time() + (60 * 60 * 24 * 30));
+            setcookie("token", uniqid(), time() + (60 * 60 * 24 * 30));
             header("Location: ../index.php");
         }
         else{

@@ -1,3 +1,8 @@
 :root{
     --primary:green;
 }
+
+
+.btn{
+    background-color: var(--primary);
+}

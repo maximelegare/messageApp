@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +10,9 @@
     <?php include("./pageLogic/getTheme.php") ?>
     <!-- <link rel="stylesheet" href="./css/variables.css"> -->
     <link rel="stylesheet" href="./css/pages/afficherMessages.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
@@ -27,18 +27,19 @@
         </div>
 
     </div>
-    <?php // include("./components/layout/footer.php") ?>
+    <?php // include("./components/layout/footer.php") 
+    ?>
 </body>
 
 
 </html>
 
 
-<?php 
+<?php
 
-if(isset($_COOKIE["loggedIn"])){
+if (isset($_COOKIE["loggedIn"])) {
     header("Location: login.php");
-}else{
+} else {
     return false;
 }
 

@@ -2,39 +2,35 @@
 header {
   background-color: var(--primary);
   width: 100%;
-}
-header li a{
-  padding:5px 8px;
-  border-radius: 3px;
-  border:1px solid white;
+  
 }
 
-header a{
+/* header a{
   color: white;
-}
+} */
 
-header h3 {
+/* header h3 {
   color: white;
   cursor: pointer;
-}
+} */
 
-header .container {
+/* header .container {
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   height:40px;
-}
+} */
 
 
-header .container_links{
+/* header .container_links{
   display: flex;
   gap: 10px;
 }
 
 header .container_links_link{
   display: inline;
-}
+} */
 
 
 
