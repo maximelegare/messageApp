@@ -1,16 +1,25 @@
 <?php
-function createhref($addr)
+function createEl($addr)
 {
+
+
+
     // Vérifier si l'élément est un dossier ou un fichier
     if (is_dir($addr)) {
-        return "";
+
+        return "<li style='display:none'></li>";
     } else {
-        $url = urldecode("./data/" ."$addr");
-        return "<a href='./afficherMessage.php?url={$url}'>{$addr}</a><br/>";
+        $url = urldecode("./data/" . "$addr");
+
+        $a = "<a href='./afficherMessage.php?url={$url}'>{$addr}</a><br/>";
+        $li =  "<li class='card py-2 px-4 shadow-md mb-2 w-fit'>" . $a . "</li>";
+
+        return $li;
     }
 };
+
 // Récupérer le dossier courant
-$dossier_courant = '.\\data';
+$dossier_courant = './data';
 // Ouvrir le dossier
 $pointeur_dossier = opendir($dossier_courant);
 // Parcourir les fichiers et dossiers du dossier courant
@@ -23,7 +32,7 @@ do {
         continue;
     };
 
-    $nav_list .= "<li class='card py-2 px-4 shadow-md mb-2 w-fit'>" . createhref($dossier_courant) . "</li>";
+    $nav_list .=  createEl($dossier_courant);
 } while (($dossier_courant = readdir($pointeur_dossier)) !== false);
 // Fermer le pointeur du dossier
 closedir($pointeur_dossier);

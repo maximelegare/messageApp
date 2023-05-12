@@ -1,7 +1,7 @@
 <?php
     $password = "123456";
-    $user = "max";
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        
         $userPswrd = $_POST['password'];
         
 

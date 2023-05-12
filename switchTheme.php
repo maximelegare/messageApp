@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $style = $_POST['theme'];
         setcookie("theme", $style, time() + (60 * 60 * 24 * 30));
     };
-    header("Location: index.php");
+    header("Location: theme.php");
 
     // header("Location: getTheme.php"); # this will reload your theme selector
     // exit(); # this will make sure the cookie gets loaded next time.

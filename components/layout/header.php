@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ?>
 
@@ -13,23 +13,32 @@
                 Maxime Légaré
             </a>
         </h3>
-        <ul class="">
+        <ul class="flex gap-2">
             <li class="btn btn-sm btn-theme"><a href="./afficherMessages.php">Afficher les Messages</a></li>
             <li class="btn btn-sm"><a href="./index.php">Contacter</a></li>
             <li class="btn btn-sm"><a href="./theme.php">Theme</a></li>
-            <li class="btn btn-sm" onclick="<?php session_destroy();?>"><a href="./login.php">Logout</a></li>
+            <form method="post">
+                <li>
+                    <button class="btn btn-sm inline" type="submit" name="logout" id="test" value="RUN" style="background-color:var(--primary-dark);">Logout</button>
+                </li>
+            </form>
         </ul>
     </div>
 </header>
 
+
 <?php
-function getIsLoggedIn($value)
+
+function logout()
 {
-    if(isset($_COOKIE["loggedIn"])){
-        return true;
-    }else{
-        return false;
-    }
-};
+    session_destroy();
+    header("Location: login.php");
+}
+
+if (array_key_exists('logout', $_POST)) {
+    logout();
+}
+
+// https://stackoverflow.com/questions/32824360/run-php-function-on-button-click
 
 ?>

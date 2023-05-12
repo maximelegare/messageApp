@@ -31,7 +31,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] !== true) {
         <div class="container flex justify-center card p-10 shadow-xl w-96 mt-20">
             <div class="container_list">
                 <h3>Message:</h3>
-                <?php include("./pageLogic/afficherMessageLogic.php") ?>
+                <?php include("./utils/afficherMessageLogic.php") ?>
             </div>
         </div>
 
