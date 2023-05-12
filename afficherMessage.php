@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] !== true) {
+    header("Location: login.php");
+    exit;
+};
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
-    <?php include("./pageLogic/getTheme.php") ?>
+    <?php include("./utils/getTheme.php") ?>
     <!-- <link rel="stylesheet" href="./css/variables.css"> -->
     <link rel="stylesheet" href="./css/pages/afficherMessages.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />

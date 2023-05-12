@@ -1,6 +1,4 @@
 <?php
-
-
     $password = "123456";
     $user = "max";
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -8,7 +6,13 @@
         
 
         if($userPswrd === $password){
-            setcookie("token", uniqid(), time() + (60 * 60 * 24 * 30));
+            // $uid = uniqid();
+            // setcookie("token", $uid, time() + (60 * 60 * 24 * 30));
+            // $_COOKIE["token"] = $uid;
+            session_start();
+
+            $_SESSION["connected"] = true;
+
             header("Location: ../index.php");
         }
         else{

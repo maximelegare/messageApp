@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] !== true) {
+
+    header("Location: login.php");
+    exit;
+};
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +18,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
     <!-- <link rel="stylesheet" href="./css/variables.css"> -->
-    <?php include("./pageLogic/getTheme.php") ?>
+    <?php include("./utils/getTheme.php") ?>
     <link rel="stylesheet" href="./css/pages/afficherMessages.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,7 +32,7 @@
         <div class="container card shadow-xl w-42 flex">
 
             <h3>Liste de Messages:</h3>
-            <?php include("./pageLogic/afficherMessagesLogic.php") ?>
+            <?php include("./utils/afficherMessagesLogic.php") ?>
 
         </div>
 

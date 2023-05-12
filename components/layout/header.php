@@ -1,3 +1,7 @@
+<?php 
+
+?>
+
 <style>
     @import "./css/layout/header.css";
 </style>
@@ -13,7 +17,7 @@
             <li class="btn btn-sm btn-theme"><a href="./afficherMessages.php">Afficher les Messages</a></li>
             <li class="btn btn-sm"><a href="./index.php">Contacter</a></li>
             <li class="btn btn-sm"><a href="./theme.php">Theme</a></li>
-            <li class="btn btn-sm"><a href="./login.php">Login</a></li>
+            <li class="btn btn-sm" onclick="<?php session_destroy();?>"><a href="./login.php">Logout</a></li>
         </ul>
     </div>
 </header>

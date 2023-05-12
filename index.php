@@ -1,7 +1,11 @@
 <?php
-if (!isset($_COOKIE["theme"])):
+session_start();
+
+if(!isset($_SESSION["connected"]) || $_SESSION["connected"] !== true){
+
     header("Location: login.php");
-else :
+    exit;
+};
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -13,7 +17,7 @@ else :
         <title>Document</title>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="./css/pages/index.css">
-        <?php include("./pageLogic/getTheme.php") ?>
+        <?php include("./utils/getTheme.php") ?>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- <link rel="stylesheet" href="./css/variables.css"> -->
@@ -42,5 +46,5 @@ else :
     </html>
 
 <?php
-endif;
+// endif;
 ?>
