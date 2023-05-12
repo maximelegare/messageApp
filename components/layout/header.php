@@ -26,7 +26,7 @@
             <li class="btn btn-sm bg-transparent border-white"><a href="./theme.php">Theme</a></li>
             <form method="post">
                 <li class="">
-                    <button class="btn btn-sm inline border-white" type="submit" name="logout" id="test" value="RUN" style="background-color:var(--primary-dark);">Logout</button>
+                    <button class="btn btn-sm inline border-white" type="submit" name="logout" id="test" value="RUN" style="background-color:var(--primary-purple);">Logout</button>
                 </li>
             </form>
         </ul>

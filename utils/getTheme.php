@@ -3,7 +3,7 @@
 if(isset($_COOKIE["theme"])){
     $theme = $_COOKIE["theme"];
 }else{
-    $theme = "light";
+    $theme = "green";
 }
 
  ?>

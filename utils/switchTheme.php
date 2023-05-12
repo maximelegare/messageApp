@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     };
     header("Location: theme.php");
 
+    // header("Location: getTheme.php"); # this will reload your theme selector
+    // exit(); # this will make sure the cookie gets loaded next time.
     
     // https://stackoverflow.com/questions/1388210/php-using-a-drop-down-list-to-change-site-theme
 

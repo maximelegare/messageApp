@@ -33,17 +33,17 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] !== true) {
                 <h3 class="text-xl font-semibold mb-4 uppercase">Changez le theme</h3>
                 <form action="./switchTheme.php" method="post" class="flex items-center gap-3">
 
-                    <div class="flex gap-1ks">
-                        <label for="dark">Dark</label>
-                        <input <?php getCheckedValue("dark"); ?> type="radio" name="theme" value="dark" class="radio">
+                    <div class="flex gap-1">
+                        <label for="purple">purple</label>
+                        <input <?php getCheckedValue("purple"); ?> type="radio" name="theme" value="purple" class="radio">
 
                     </div>
 
                     <div class="flex gap-1">
 
-                        <label for="light">Light</label>
-                        <input <?php getCheckedValue("light")
-                                ?> type="radio" name="theme" value="light" class="radio">
+                        <label for="green">green</label>
+                        <input <?php getCheckedValue("green")
+                                ?> type="radio" name="theme" value="green" class="radio">
                     </div>
                     <input type="submit" name="submit" value="Changer le Theme" class="btn btn-sm bg-black" style="background-color:var(--primary);" />
                 </form>
@@ -70,7 +70,7 @@ function getCheckedValue($value)
     }
 
 
-    if (!$theme && $value === "light") {
+    if (!$theme && $value === "green") {
         echo "checked";
     } elseif ($theme === $value) {
         echo "checked";
