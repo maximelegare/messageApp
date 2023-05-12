@@ -6,20 +6,27 @@
     @import "./css/layout/header.css";
 </style>
 
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
 <header class="flex justify-center shadow-xl">
     <div class="container flex justify-between items-center h-16">
         <h3>
-            <a href="./index.php" class="text-white">
+            <a href="./index.php" class="text-white font-semibold uppercase text-xl">
                 Maxime Légaré
             </a>
         </h3>
         <ul class="flex gap-2">
-            <li class="btn btn-sm btn-theme"><a href="./afficherMessages.php">Afficher les Messages</a></li>
-            <li class="btn btn-sm"><a href="./index.php">Contacter</a></li>
-            <li class="btn btn-sm"><a href="./theme.php">Theme</a></li>
+            <li class="btn btn-sm bg-transparent border-white"><a href="./index.php"><span class="material-symbols-outlined">
+                        home
+                    </span>
+                </a></li>
+            <li class="btn btn-sm bg-transparent border-white"><a href="./afficherMessages.php">Afficher les Messages</a></li>
+            <li class="btn btn-sm bg-transparent border-white"><a href="./theme.php">Theme</a></li>
             <form method="post">
-                <li>
-                    <button class="btn btn-sm inline" type="submit" name="logout" id="test" value="RUN" style="background-color:var(--primary-dark);">Logout</button>
+                <li class="">
+                    <button class="btn btn-sm inline border-white" type="submit" name="logout" id="test" value="RUN" style="background-color:var(--primary-dark);">Logout</button>
                 </li>
             </form>
         </ul>

@@ -1,8 +1,5 @@
 :root{
-    --primary:red;
-    --primary-dark:rgb(150, 0, 0);
+    --primary:rgb(115, 2, 172);
+    --primary-dark:rgb(57, 0, 86);
 }
 
-.btn-theme{
-    background-color: red;
-}

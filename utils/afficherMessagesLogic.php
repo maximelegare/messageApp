@@ -3,7 +3,6 @@ function createEl($addr)
 {
 
 
-
     // Vérifier si l'élément est un dossier ou un fichier
     if (is_dir($addr)) {
 
