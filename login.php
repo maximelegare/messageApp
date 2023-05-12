@@ -25,7 +25,7 @@
                 <h3>Login</h3>
                 <form action="./pageLogic/loginLogic.php" method="POST">
                     <input class="input input-sm input-bordered " type="password" name="password" placeholder="password">
-                    <input class="btn btn-sm w-fit" type="submit" name="submit">
+                    <input class="btn btn-sm w-fit" type="submit" name="submit" style="background-color:var(--primary);">
                 </form>
             </div>
         </div>

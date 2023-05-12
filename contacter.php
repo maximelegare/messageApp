@@ -1,15 +1,17 @@
-
-
 <?php
 
 function validateEmail($email)
 {
-    $check1 = strpos($email, "@");
-    $check2 = strpos($email, ".");
-
-
-    return ($check1 === false && $check2 === false && $check2 > $check1);
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo ("$email is a valid email address");
+        return true;
+    } else {
+        echo ("$email is not a valid email address");
+        return false;
+    }
 };
+// https://www.w3schools.com/php/filter_validate_email.asp
+
 
 
 function createFile($obj)
@@ -39,8 +41,6 @@ function createFile($obj)
     } else {
         echo "Une erreur s'est produite";
     }
-
-
 };
 
 
@@ -56,11 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-    // if (validateEmail($tEmail) === false) {
-    //     echo "Please enter a valid email";
-    // };
+    if (validateEmail($tEmail) === false) {
+        echo "Please enter a valid email";
+        return;
+    };
 
-    //https://stackoverflow.com/questions/1725907/check-if-a-string-is-an-email-address-in-php
+
 
 
 

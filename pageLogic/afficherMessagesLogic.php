@@ -19,11 +19,11 @@ $nav_list = "<ul>";
 
 do {
     // Ignorer les dossiers '.' et '..'
-    if ($dossier_courant == '.' || $dossier_courant == '..') {
+    if ($dossier_courant == '.' || $dossier_courant == '..' || $dossier_courant == "") {
         continue;
     };
 
-    $nav_list .= "<li>" . createhref($dossier_courant) . "</li>";
+    $nav_list .= "<li class='card py-2 px-4 shadow-md mb-2 w-fit'>" . createhref($dossier_courant) . "</li>";
 } while (($dossier_courant = readdir($pointeur_dossier)) !== false);
 // Fermer le pointeur du dossier
 closedir($pointeur_dossier);

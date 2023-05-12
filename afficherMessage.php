@@ -18,8 +18,8 @@
 <body>
 
     <?php include("./components/layout/header.php") ?>
-    <div class="afficher-messages">
-        <div class="container">
+    <div class="flex justify-center ">
+        <div class="container flex justify-center card p-10 shadow-xl w-96 mt-20">
             <div class="container_list">
                 <h3>Message:</h3>
                 <?php include("./pageLogic/afficherMessageLogic.php") ?>

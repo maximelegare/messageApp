@@ -2,10 +2,10 @@
     @import "./css/layout/header.css";
 </style>
 
-<header class="flex justify-center">
+<header class="flex justify-center shadow-xl">
     <div class="container flex justify-between items-center h-16">
         <h3>
-            <a href="./index.php">
+            <a href="./index.php" class="text-white">
                 Maxime Légaré
             </a>
         </h3>

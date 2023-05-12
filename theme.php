@@ -26,15 +26,22 @@
     <main class="flex w-full justify-center items-center pt-20">
         <div class="card p-10 w-96 bg-base-100 shadow-xl">
             <div class="container_form">
-                <h3>Entrez un message!</h3>
-                <form action="./switchTheme.php" method="post">
-                    <label for="dark">Dark</label>
-                    <input <?php getCheckedValue("dark"); ?> type="radio" name="theme" value="dark" class="radio">
+                <h3>Changez le theme</h3>
+                <form action="./switchTheme.php" method="post" class="flex items-center gap-3">
 
-                    <label for="light">Light</label>
-                    <input <?php getCheckedValue("light")
-                            ?> type="radio" name="theme" value="light" class="radio">
-                    <input type="submit" name="submit" value="Changer le Theme"  class="btn btn-sm btn-dark"/>
+                    <div class="flex gap-1ks">
+                        <label for="dark">Dark</label>
+                        <input <?php getCheckedValue("dark"); ?> type="radio" name="theme" value="dark" class="radio">
+
+                    </div>
+
+                    <div class="flex gap-1">
+
+                        <label for="light">Light</label>
+                        <input <?php getCheckedValue("light")
+                                ?> type="radio" name="theme" value="light" class="radio">
+                    </div>
+                    <input type="submit" name="submit" value="Changer le Theme" class="btn btn-sm bg-black" style="background-color:var(--primary);" />
                 </form>
             </div>
         </div>

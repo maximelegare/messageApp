@@ -24,13 +24,13 @@ else :
         <?php include("./components/layout/header.php") ?>
         <main class="flex justify-center">
             <div class="container flex justify-center">
-                <div class="flex flex-col">
+                <div class="flex flex-col mt-20">
                     <h3>Entrez un message!</h3>
                     <form action="./contacter.php" method="POST" class="flex flex-col items-center gap-2">
-                        <input type="text" name="name" placeholder="name" class="input input-bordered block w-full">
-                        <input type="email" name="email" placeholder="email" class="input input-bordered block w-full">
+                        <input type="text" name="name" placeholder="name" class="input input-bordered input-sm block w-full">
+                        <input type="email" name="email" placeholder="email" class="input input-sm input-bordered block w-full">
                         <textarea name="message" placeholder="enter a message" rows="8" cols="50" class="textarea textarea-bordered block"></textarea>
-                        <input type="submit" name="submit" class="btn w-24">
+                        <input type="submit" name="submit" class="btn w-24 btn-sm" style="background-color:var(--primary);">
                     </form>
                 </div>
             </div>
