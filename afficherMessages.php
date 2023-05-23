@@ -34,6 +34,7 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] !== true) {
 
                 <h3 class="text-xl font-semibold mb-4 uppercase">Liste de messages:</h3>
                 <?php include("./utils/afficherMessagesLogic.php") ?>
+                <?php include("./utils/phpMyAdmin.php") ?>
 
             </div>
         </div>

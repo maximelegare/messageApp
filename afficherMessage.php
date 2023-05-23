@@ -26,11 +26,12 @@ if (!isset($_SESSION["connected"]) || $_SESSION["connected"] !== true) {
 <body>
 
     <?php include("./components/layout/header.php") ?>
-    <div class="flex justify-center ">
+    <div class="flex justify-center">
         <div class="container flex justify-center card p-10 shadow-xl w-96 mt-20">
             <div class="container_list">
             <h3 class="text-xl font-semibold mb-4 uppercase">Message:</h3>
                 <?php include("./utils/afficherMessageLogic.php") ?>
+                
             </div>
         </div>
 

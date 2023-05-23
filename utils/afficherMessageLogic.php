@@ -1,11 +1,16 @@
 <?php
+require("./utils/phpMyAdmin.php");
 
 $url = $_GET["url"];
 
 
-$myfile = fopen($url, "r") or die("Unable to open file!");
+$sql = "SELECT * FROM commentaires WHERE id = $url";
 
+    
 
-echo fread($myfile, filesize($url));
-fclose($myfile);
+$result = $pdo->query($sql);
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    echo $row['message'];
+};
+
 
