@@ -28,7 +28,6 @@ if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) {
                         home
                     </span>
                 </a></li>
-            <li class="btn btn-sm bg-transparent border-white"><a href="./afficherMessages.php">Afficher les Messages</a></li>
             <li class="btn btn-sm bg-transparent border-white"><a href="./theme.php">Theme</a></li>
             <?php
             $login = "<li class='btn btn-sm border-white' style='background-color:var(--primary-purple);'><a href='./login.php'>Login</a></li>";

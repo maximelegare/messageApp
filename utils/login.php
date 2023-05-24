@@ -1,8 +1,7 @@
 <?php
 $adminUser = "admin";
 $adminPassword = "123456";
-$user = "max";
-$password = "123456";
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
