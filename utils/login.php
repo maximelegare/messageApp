@@ -1,22 +1,29 @@
 <?php
-    $password = "123456";
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        
-        $userPswrd = $_POST['password'];
-        
+$adminUser = "admin";
+$adminPassword = "123456";
+$user = "max";
+$password = "123456";
 
-        if($userPswrd === $password){
-            // $uid = uniqid();
-            // setcookie("token", $uid, time() + (60 * 60 * 24 * 30));
-            // $_COOKIE["token"] = $uid;
-            session_start();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $userPswrd = $_POST['password'];
 
-            $_SESSION["connected"] = true;
+    if ($username === $adminUser && $userPswrd === $adminPassword) {
+        session_start();
 
-            header("Location: ../index.php");
-        }
-        else{
-            header("Location: ../login.php");
-        };
-    }
+        $_SESSION["connected"] = true;
+        $_SESSION["admin"] = true;
+
+        header("Location: ../admin.php");
+    } else if ($username === $user && $userPswrd === $password) {
+        echo("normal");
+        session_start();
+
+        $_SESSION["connected"] = true;
+
+        header("Location: ../index.php");
+    } else {
+        header("Location: ../login.php");
+    };
+}
 

@@ -14,6 +14,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // exit(); # this will make sure the cookie gets loaded next time.
     
     // https://stackoverflow.com/questions/1388210/php-using-a-drop-down-list-to-change-site-theme
-
 };
 

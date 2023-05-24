@@ -1,27 +1,5 @@
-<?php session_start();
 
-$password = "123456";
-$user = "max";
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userPswrd = $_POST['password'];
-    
 
-    if($userPswrd === $password){
-        // $uid = uniqid();
-        // setcookie("token", $uid, time() + (60 * 60 * 24 * 30));
-        // $_COOKIE["token"] = $uid;
-        session_start();
-
-        $_SESSION["connected"] = true;
-
-        header("Location: ../index.php");
-    }
-    else{
-        header("Location: ../login.php");
-    };
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,15 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main class="flex w-full justify-center items-center pt-20">
         <div class="card p-10 w-96 bg-base-100 shadow-xl">
             <div>
-            <h3 class="text-xl font-semibold mb-4 uppercase">Login</h3>
-                <form action="./utils/login.php" method="POST">
-                    <input class="input input-sm input-bordered " type="password" name="password" placeholder="Password (123456)">
-                    <input class="btn btn-sm w-fit" type="submit" name="submit" style="background-color:var(--primary);">
+                <h3 class="text-xl font-semibold mb-4 uppercase">Login</h3>
+                <form class="flex flex-col items-center gap-2" action="./utils/login.php" method="POST">
+                    <input class="input input-sm input-bordered  w-full" type="text" name="username" placeholder="Username (max / admin)">
+                    <input class="input input-sm input-bordered  w-full" type="password" name="password" placeholder="Password (123456)">
+                    <input class="btn btn-sm w-fit" type="submit" name="submit" style="background-color:var(--primary);" value="login">
                 </form>
             </div>
         </div>
     </main>
-   
+
 </body>
 
 </html>

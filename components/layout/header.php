@@ -1,5 +1,10 @@
 <?php
 
+$isAdmin = false;
+if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) {
+    $isAdmin = true;
+}
+
 ?>
 
 <style>
@@ -18,17 +23,26 @@
             </a>
         </h3>
         <ul class="flex gap-2">
-            <li class="btn btn-sm bg-transparent border-white"><a href="./index.php"><span class="material-symbols-outlined">
+
+            <li class="btn btn-sm bg-transparent border-white"><a href="<?php echo ($isAdmin ? "./admin.php" : "./index.php") ?>"><span class="material-symbols-outlined">
                         home
                     </span>
                 </a></li>
             <li class="btn btn-sm bg-transparent border-white"><a href="./afficherMessages.php">Afficher les Messages</a></li>
             <li class="btn btn-sm bg-transparent border-white"><a href="./theme.php">Theme</a></li>
-            <form method="post">
-                <li class="">
-                    <button class="btn btn-sm inline border-white" type="submit" name="logout" id="test" value="RUN" style="background-color:var(--primary-purple);">Logout</button>
-                </li>
-            </form>
+            <?php
+            $login = "<li class='btn btn-sm border-white' style='background-color:var(--primary-purple);'><a href='./login.php'>Login</a></li>";
+
+            $logout = "
+                <form method='post'>
+                    <li>
+                        <button class='btn btn-sm inline border-white' type='submit' name='logout' id='test' value='RUN' style='background-color:var(--primary-purple);'>Logout</button>
+                    </li>
+                </form>";
+
+            $isAdmin ? printf($logout) : printf($login);
+            ?>
+
         </ul>
     </div>
 </header>
@@ -39,7 +53,7 @@
 function logout()
 {
     session_destroy();
-    header("Location: login.php");
+    header("Location: index.php");
 }
 
 if (array_key_exists('logout', $_POST)) {
